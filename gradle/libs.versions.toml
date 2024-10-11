@@ -3,7 +3,7 @@ agp = "8.2.2"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
-androidx-activityCompose = "1.9.1"
+androidx-activityCompose = "1.9.2"
 androidx-appcompat = "1.7.0"
 androidx-constraintlayout = "2.1.4"
 androidx-core-ktx = "1.13.1"
@@ -18,11 +18,10 @@ kotlinx-coroutines = "1.8.1"
 
 ktor = "2.3.12"
 
-koin = "3.6.0-Beta4"
-koinComposeMultiplatform = "1.2.0-Beta4"
+koin = "4.0.0"
 
-navigationCompose = "2.8.0-alpha09"
-lifecycleViewModel = "2.8.5"
+navigationCompose = "2.8.0-alpha10"
+lifecycleViewModel = "2.8.6"
 jetbrainsKotlinJvm = "1.9.0"
 
 [libraries]
@@ -45,8 +44,8 @@ lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", versi
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinComposeMultiplatform" }
-koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinComposeMultiplatform" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
 
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }

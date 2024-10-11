@@ -52,6 +52,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
 
+            implementation(projects.modules.utils.network)
+
             implementation(libs.bundles.ktor)
             api(libs.koin.core)
             implementation(libs.koin.compose)

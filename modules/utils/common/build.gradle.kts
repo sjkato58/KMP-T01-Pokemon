@@ -20,7 +20,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "creaturelookup"
+            baseName = "common"
             isStatic = true
         }
     }
@@ -28,7 +28,6 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation(projects.modules.data.pokemon)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -37,7 +36,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.mtfuji.sakura.features.creaturelookup"
+    namespace = "com.mtfuji.sakura.utils.common"
     compileSdk = 34
     defaultConfig {
         minSdk = 24

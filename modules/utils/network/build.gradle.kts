@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -11,6 +12,8 @@ kotlin {
             }
         }
     }
+
+    jvm("desktop")
     
     listOf(
         iosX64(),
@@ -24,12 +27,15 @@ kotlin {
     }
 
     sourceSets {
-         androidMain.dependencies {
+        val desktopMain by getting
+
+        androidMain.dependencies {
             implementation(libs.ktor.client.okhttp)
             implementation(libs.koin.android)
         }
         commonMain.dependencies {
             //put your multiplatform dependencies here
+            api(projects.modules.utils.common)
             implementation(libs.bundles.ktor)
             api(libs.koin.core)
         }
@@ -38,6 +44,11 @@ kotlin {
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
+        }
+        desktopMain.dependencies {
+            //implementation(libs.kotlinx.coroutines.swing)
+
+            implementation(libs.ktor.client.okhttp)
         }
     }
 }
